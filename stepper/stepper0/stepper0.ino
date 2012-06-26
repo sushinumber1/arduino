@@ -20,10 +20,10 @@
  * @date: 20 Oct. 2005
  */
 
-int motorPin1 = 8;
-int motorPin2 = 9;
-int motorPin3 = 10;
-int motorPin4 = 11;
+int motorPin1 = 4;
+int motorPin2 = 5;
+int motorPin3 = 6;
+int motorPin4 = 7;
 int delayTime = 10;
 
 void setup() {
@@ -36,7 +36,7 @@ void setup() {
 void loop() {
 
   senshoraire();
-  delay(1000);
+  delay(100);
 
 
 }

@@ -20,16 +20,10 @@
  * @date: 20 Oct. 2005
  */
 
-int motorPin1 = 3;
-int motorPin2 = 2;
-int motorPin3 = 12;
-int motorPin4 = 13;
-/*
 int motorPin1 = 4;
 int motorPin2 = 5;
 int motorPin3 = 6;
 int motorPin4 = 7;
-*/
 int delayTime = 10;
 int incomingByte=0;
 //int init;

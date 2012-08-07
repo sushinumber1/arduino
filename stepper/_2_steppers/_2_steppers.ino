@@ -19,20 +19,27 @@
  * @author: David Cuartielles
  * @date: 20 Oct. 2005
  */
-
-int motorPin1 = 4;
-int motorPin2 = 5;
-int motorPin3 = 6;
-int motorPin4 = 7;
+int motor0Pin1 = 3;
+int motor0Pin2 = 2;
+int motor0Pin3 = 12;
+int motor0Pin4 = 13;
+int motor1Pin1 = 4;
+int motor1Pin2 = 5;
+int motor1Pin3 = 6;
+int motor1Pin4 = 7;
 int delayTime = 10;
 int incomingByte=0;
 //int init;
 
 void setup() {
-  pinMode(motorPin1, OUTPUT);
-  pinMode(motorPin2, OUTPUT);
-  pinMode(motorPin3, OUTPUT);
-  pinMode(motorPin4, OUTPUT);
+  pinMode(motor0Pin1, OUTPUT);
+  pinMode(motor0Pin2, OUTPUT);
+  pinMode(motor0Pin3, OUTPUT);
+  pinMode(motor0Pin4, OUTPUT);
+  pinMode(motor1Pin1, OUTPUT);
+  pinMode(motor1Pin2, OUTPUT);
+  pinMode(motor1Pin3, OUTPUT);
+  pinMode(motor1Pin4, OUTPUT);
   Serial.begin(9600);
 //  init=4;
 }
@@ -47,45 +54,80 @@ if (Serial.available() > 0) {
 		// say what you got:
 		//Serial.print("I received: ");
 		Serial.println(incomingByte, DEC);
-if (incomingByte==1) phase1();
-if (incomingByte==2) phase2();
-if (incomingByte==3) phase3();
-if (incomingByte==4) phase4();
+if (incomingByte==1) m0phase1();
+if (incomingByte==2) m0phase2();
+if (incomingByte==3) m0phase3();
+if (incomingByte==4) m0phase4();
+if (incomingByte==5) m1phase1();
+if (incomingByte==6) m1phase2();
+if (incomingByte==7) m1phase3();
+if (incomingByte==8) m1phase4();
 }
 
 }
 
-void phase1()
+void m0phase1()
 {
-  digitalWrite(motorPin1, HIGH);
-  digitalWrite(motorPin2, LOW);
-  digitalWrite(motorPin3, LOW);
-  digitalWrite(motorPin4, LOW);
+  digitalWrite(motor0Pin1, HIGH);
+  digitalWrite(motor0Pin2, LOW);
+  digitalWrite(motor0Pin3, LOW);
+  digitalWrite(motor0Pin4, LOW);
   delay(delayTime);
 }
-void phase2()
+void m0phase2()
 {
-  digitalWrite(motorPin1, LOW);
-  digitalWrite(motorPin2, HIGH);
-  digitalWrite(motorPin3, LOW);
-  digitalWrite(motorPin4, LOW);
+  digitalWrite(motor0Pin1, LOW);
+  digitalWrite(motor0Pin2, HIGH);
+  digitalWrite(motor0Pin3, LOW);
+  digitalWrite(motor0Pin4, LOW);
   delay(delayTime);
 }
-void phase3()
+void m0phase3()
 {
-  digitalWrite(motorPin1, LOW);
-  digitalWrite(motorPin2, LOW);
-  digitalWrite(motorPin3, HIGH);
-  digitalWrite(motorPin4, LOW);
+  digitalWrite(motor0Pin1, LOW);
+  digitalWrite(motor0Pin2, LOW);
+  digitalWrite(motor0Pin3, HIGH);
+  digitalWrite(motor0Pin4, LOW);
   delay(delayTime);
 }
-void phase4()
+void m0phase4()
 {
-  digitalWrite(motorPin1, LOW);
-  digitalWrite(motorPin2, LOW);
-  digitalWrite(motorPin3, LOW);
-  digitalWrite(motorPin4, HIGH);
+  digitalWrite(motor0Pin1, LOW);
+  digitalWrite(motor0Pin2, LOW);
+  digitalWrite(motor0Pin3, LOW);
+  digitalWrite(motor0Pin4, HIGH);
   delay(delayTime);
 }
 
-
+void m1phase1()
+{
+  digitalWrite(motor1Pin1, HIGH);
+  digitalWrite(motor1Pin2, LOW);
+  digitalWrite(motor1Pin3, LOW);
+  digitalWrite(motor1Pin4, LOW);
+  delay(delayTime);
+}
+void m1phase2()
+{
+  digitalWrite(motor1Pin1, LOW);
+  digitalWrite(motor1Pin2, HIGH);
+  digitalWrite(motor1Pin3, LOW);
+  digitalWrite(motor1Pin4, LOW);
+  delay(delayTime);
+}
+void m1phase3()
+{
+  digitalWrite(motor1Pin1, LOW);
+  digitalWrite(motor1Pin2, LOW);
+  digitalWrite(motor1Pin3, HIGH);
+  digitalWrite(motor1Pin4, LOW);
+  delay(delayTime);
+}
+void m1phase4()
+{
+  digitalWrite(motor1Pin1, LOW);
+  digitalWrite(motor1Pin2, LOW);
+  digitalWrite(motor1Pin3, LOW);
+  digitalWrite(motor1Pin4, HIGH);
+  delay(delayTime);
+}

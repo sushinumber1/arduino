@@ -23,11 +23,11 @@ int motor0Pin1 = 3;
 int motor0Pin2 = 2;
 int motor0Pin3 = 12;
 int motor0Pin4 = 13;
-int motor1Pin1 = 4;
-int motor1Pin2 = 5;
-int motor1Pin3 = 6;
-int motor1Pin4 = 7;
-int delayTime = 10;
+int motor1Pin1 = 7;
+int motor1Pin2 = 6;
+int motor1Pin3 = 5;
+int motor1Pin4 = 4;
+int delayTime = 0;
 int incomingByte=0;
 //int init;
 

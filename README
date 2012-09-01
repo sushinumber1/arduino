@@ -1,0 +1,1 @@
+The goal is  to control motor via arduino through processing via serial usb. It should be able to read coordinates from a file and send the correct number of steps to the motor.
